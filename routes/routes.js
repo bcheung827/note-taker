@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const shortId = require('shortid');
 
 module.exports = app => {
 
@@ -13,7 +14,12 @@ module.exports = app => {
         });
 
         app.post("/api/notes", function (req, res) {
-            let newNote = req.body;
+            console.log(req);
+           let newNote = {
+               title: req.body.title,
+               text: req.body.text,
+               id:shortId.generate()
+           };
             notes.push(newNote);
             updateDb();
             console.log("Add new note: " + newNote.title);
