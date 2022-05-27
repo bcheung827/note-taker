@@ -16,6 +16,10 @@
   ## Usage
   In the integrated terminal type node server and then a landing page with a link should be provided, which then provides access to a notes page where the user can type and save notes
 
+  <img src="Assets\note-taker.gif.gif"></img>
+
+  https://bcheung827.herokuapp.com/
+
   ## Testing
   Install node.js and test functionality
 
